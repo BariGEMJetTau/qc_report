@@ -37,8 +37,8 @@ def main():
     #Imon correction
     p0 = 964.4 #mbar
     t0 = 297.1 #K 
-    p = float(pressure)
-    t = float(temperature)
+    p = float(pressure) #mbar
+    t = float(temperature) + 273.15 #K 
     divider_current = divider_current * pow((t/t0 )*(p0/p),0.43)
 
     #Current calculation
