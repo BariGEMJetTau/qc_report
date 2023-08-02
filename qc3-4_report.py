@@ -44,7 +44,7 @@ pressure = np.around(np.array(data['Pressure (mBar)'].tolist()), 2)
 temperature = data['Temperature (C)'].tolist()[0]
 atm = data['Atm Pressure (mBar)'].tolist()[0]
 t0 = int(np.where(time == 1.00)[0])
-t1 = int(np.where(time == 3600.00)[0])
+t1 = int(np.where(time == 3700.00)[0])
 print(pressure[t0]-pressure[t1])
 p0 = (26, 0.001)
 popt, pcov = curve_fit(func, time_hr[t0+8:t1], pressure[t0+8:t1])
